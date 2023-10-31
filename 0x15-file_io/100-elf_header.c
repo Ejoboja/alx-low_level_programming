@@ -23,15 +23,10 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
 /**
-* main - Displays the information contained in the
-*        ELF header at the start of an ELF file.
-* @argc: The number of arguments supplied to the program.
-* @argv: An array of pointers to the arguments.
+* check_elf - Checks if a file is an ELF file.
+* @e_ident: A pointer to an array containing the ELF magic numbers.
 *
-* Return: 0 on success.
-*
-* Description: If the file is not an ELF File or
-*              the function fails, it exits with code 98.
+* Description: If the file is not an ELF file - exit code 98.
 */
 void check_elf(unsigned char *e_ident)
 {
